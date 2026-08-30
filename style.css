@@ -141,21 +141,21 @@ body {
   width: 100%;
 }
 
-/* Colored Banners */
 .banner {
-  width: 50px;
-  height: 70px;
+  width: 70px;            /* Increased width (was 50px) */
+  height: 95px;           /* Increased length (was 70px) */
   display: flex;
   align-items: center;
   justify-content: center;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
 
 .banner-letter {
   color: #ffffff;
-  font-size: 1.8rem;
+  font-size: 2.3rem;      /* Scaled up letter size to fit the bigger banner */
   font-weight: 800;
+  font-family: 'Cinzel', serif;
 }
 
 .banner-red { background-color: var(--banner-red); }
