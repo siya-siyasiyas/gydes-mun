@@ -1,0 +1,269 @@
+/* Base Reset & Variables */
+:root {
+  --banner-red: #9e1b32;
+  --banner-blue: #1b3b6f;
+  --banner-green: #1b4d3e;
+  --banner-yellow: #c68b59;
+  --banner-purple: #4a2545;
+  --beige-card: #f5eedc;
+  --pillar-gray: #d1d5db;
+  --pillar-shadow: #9ca3af;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+/* Glassmorphism Header Bar */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.nav-left {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-tab {
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nav-tab:hover {
+  color: #2563eb;
+}
+
+.logo-text {
+  font-weight: 800;
+  color: #0f172a;
+  font-size: 1.2rem;
+}
+
+/* Hero Section */
+.hero {
+  padding: 4rem 2rem 0 2rem;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content .subtitle {
+  color: #94a3b8;
+  margin-bottom: 3rem;
+}
+
+/* Government Building Pillar Architecture */
+.pillars-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pediment {
+  width: 100%;
+  height: 0;
+  border-left: 550px solid transparent;
+  border-right: 550px solid transparent;
+  border-bottom: 50px solid var(--pillar-gray);
+  margin: 0 auto;
+}
+
+.pillars-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  background-color: #0f172a;
+  padding: 0 10px;
+}
+
+.pillar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pillar-cap {
+  width: 100%;
+  height: 15px;
+  background-color: var(--pillar-shadow);
+  border-radius: 4px 4px 0 0;
+}
+
+.pillar-shaft {
+  width: 90%;
+  background: linear-gradient(90deg, #e5e7eb 0%, var(--pillar-gray) 50%, #9ca3af 100%);
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  min-height: 380px;
+}
+
+.pillar-base {
+  width: 100%;
+  height: 20px;
+  background-color: var(--pillar-shadow);
+  border-radius: 0 0 4px 4px;
+}
+
+.pillars-ground-base {
+  height: 25px;
+  background-color: var(--pillar-gray);
+  width: 100%;
+}
+
+/* Colored Banners */
+.banner {
+  width: 50px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.banner-letter {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.banner-red { background-color: var(--banner-red); }
+.banner-blue { background-color: var(--banner-blue); }
+.banner-green { background-color: var(--banner-green); }
+.banner-yellow { background-color: var(--banner-yellow); }
+.banner-purple { background-color: var(--banner-purple); }
+
+/* Solid Beige Interactive Cards */
+.pillar-card {
+  background-color: var(--beige-card);
+  color: #292524;
+  padding: 1rem;
+  border-radius: 6px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.pillar-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.pillar-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.pillar-card p {
+  font-size: 0.85rem;
+  color: #44403c;
+}
+
+/* Content Sections & Scattered Text Blocks */
+.section {
+  padding: 5rem 10%;
+  text-align: center;
+}
+
+.text-block {
+  background-color: #1e293b;
+  margin: 3rem 10%;
+  border-radius: 12px;
+  border-left: 5px solid #38bdf8;
+  text-align: left;
+}
+
+.text-block h2 {
+  margin-bottom: 1rem;
+}
+
+/* Live Countdown Timer */
+.countdown-container {
+  background: #1e293b;
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+#timer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+#timer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#timer span {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+#timer label {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* Footer & Socials */
+.footer {
+  background-color: #020617;
+  padding: 3rem;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+
+.social-links a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.copyright {
+  color: #64748b;
+  font-size: 0.85rem;
+}
