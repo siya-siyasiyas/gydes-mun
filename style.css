@@ -357,3 +357,114 @@ body {
   background: #38bdf8;
   color: #0f172a;
 }
+/* Team Profile Cards */
+.premium-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 40px;
+  padding: 20px 0;
+}
+
+.team-profile-card {
+  background: #1e293b;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  overflow: visible;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.team-profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-hero-frame {
+  width: 100%;
+  height: 320px;
+  position: relative;
+  background: #334155;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+.profile-hero-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease;
+}
+
+.team-profile-card:hover .profile-hero-frame img {
+  filter: grayscale(0%);
+}
+
+.profile-overlay-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 20px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.85));
+  color: #ffffff;
+}
+
+.profile-overlay-info h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  color: #ffffff !important;
+}
+
+.profile-overlay-info p {
+  font-size: 1rem;
+  margin: 4px 0 0 0;
+  font-weight: 500;
+  color: #38bdf8 !important;
+}
+
+.department-badge-icon {
+  position: absolute;
+  right: 25px;
+  top: 295px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0f172a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  border: 4px solid #1e293b;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+.profile-bio-compartment {
+  padding: 35px 20px 25px 20px;
+  background: #1e293b;
+  border-radius: 0 0 12px 12px;
+  flex-grow: 1;
+}
+
+.profile-bio-compartment h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  color: #38bdf8;
+}
+
+.profile-bio-compartment p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin: 0;
+}
