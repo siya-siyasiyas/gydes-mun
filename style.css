@@ -142,8 +142,8 @@ body {
 }
 
 .banner {
-  width: 40px;            /* Increased width (was 50px) */
-  height: 60px;           /* Increased length (was 70px) */
+  width: 30px;            /* Increased width (was 50px) */
+  height: 45px;           /* Increased length (was 70px) */
   display: flex;
   align-items: center;
   justify-content: center;
