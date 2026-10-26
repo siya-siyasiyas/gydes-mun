@@ -142,8 +142,8 @@ body {
 }
 
 .banner {
-  width: 30px;            /* Increased width (was 50px) */
-  height: 45px;           /* Increased length (was 70px) */
+  width: 45px;            /* Increased width (was 50px) */
+  height: 60px;           /* Increased length (was 70px) */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -491,8 +491,8 @@ body {
 }
 
 .hero-logo {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
 }
